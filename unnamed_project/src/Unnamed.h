@@ -6,5 +6,6 @@
 //--------------------
 
 #include "unnamed/Application.h"
+#include "unnamed/Log.h"
 
 #include "unnamed/EntryPoint.h"

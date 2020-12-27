@@ -59,7 +59,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions);UP_PLATFORM_WINDOWS</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)unnamed_project\src</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)unnamed_project\src;$(SolutionDir)unnamed_project\vendor\spdlog\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>

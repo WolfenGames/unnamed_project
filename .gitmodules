@@ -1,0 +1,6 @@
+[submodule "unnamed_project/vendor/GLFW"]
+	path = unnamed_project/vendor/GLFW
+	url = https://github.com/WolfenGames/glfw.git
+[submodule "unnamed_project/vendor/spdlog"]
+	path = unnamed_project/vendor/spdlog
+	url = https://github.com/gabime/spdlog

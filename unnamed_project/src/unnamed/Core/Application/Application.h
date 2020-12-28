@@ -1,10 +1,8 @@
 #pragma once
 
-#include "Core.h"
-
 namespace UNNAMED {
 	
-	class UP_API Application
+	class Application
 	{
 	public:
 		Application();

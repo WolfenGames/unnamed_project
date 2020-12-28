@@ -1,3 +1,4 @@
+#include "upch.h"
 #include "Log.h"
 
 namespace UNNAMED {
@@ -7,7 +8,7 @@ namespace UNNAMED {
 
 	void Log::Init() {
 		spdlog::set_pattern("%^[%T] %n: %v%$");
-		s_CoreLogger = spdlog::stdout_color_mt("UNNAMED");
+		s_CoreLogger = spdlog::stdout_color_mt("U_P");
 		s_CoreLogger->set_level(spdlog::level::trace);
 
 		s_ClientLogger = spdlog::stdout_color_mt("APP");

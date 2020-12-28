@@ -5,7 +5,7 @@
 #include <stdio.h>
 //--------------------
 
-#include "unnamed/Application.h"
-#include "unnamed/Log.h"
+#include "unnamed/Core/Application/Application.h"
+#include "unnamed/Core/Log/Log.h"
 
 #include "unnamed/EntryPoint.h"

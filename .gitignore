@@ -31,9 +31,17 @@
 *.out
 *.app
 
-#folders
-.vs
-bin
-bin-int
-.user
-unnamed_project/vendor/
+#MINE
+# Binaries
+**/bin/
+bin-int/
+
+# Hazel files
+*.log
+
+# Visual Studio files and folder
+.vs/
+**.sln
+**.vcxproj
+**.vcxproj.filters
+**.vcxproj.user

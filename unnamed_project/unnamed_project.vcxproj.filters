@@ -1,42 +1,66 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Source Files">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    <Filter Include="unnamed">
+      <UniqueIdentifier>{0D6CB23A-794B-31D6-8263-BCACEEC19737}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    <Filter Include="unnamed\Core">
+      <UniqueIdentifier>{8520E2C8-7183-716D-1A09-AA23064B3DF0}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    <Filter Include="unnamed\Core\Application">
+      <UniqueIdentifier>{C84B2F0A-B470-7E8A-DDBB-631AC93F7DA8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="unnamed\Core\Codes">
+      <UniqueIdentifier>{82249922-6E08-5A78-D768-54CBC36B44FA}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="unnamed\Core\Log">
+      <UniqueIdentifier>{D6F273B6-C2EB-9208-EB1D-788DD7757214}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="unnamed\Events">
+      <UniqueIdentifier>{51670E8F-3D35-0295-26C9-72BB1236DEF9}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\unnamed\Core.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="src\Unnamed.h" />
+    <ClInclude Include="src\unnamed\Core\Application\Application.h">
+      <Filter>unnamed\Core\Application</Filter>
     </ClInclude>
-    <ClInclude Include="src\unnamed\Application.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="src\unnamed\Core\Base.h">
+      <Filter>unnamed\Core</Filter>
     </ClInclude>
-    <ClInclude Include="src\Unnamed.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="src\unnamed\Core\Codes\KeyCodes.h">
+      <Filter>unnamed\Core\Codes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\unnamed\Core\Codes\MouseCodes.h">
+      <Filter>unnamed\Core\Codes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\unnamed\Core\Log\Log.h">
+      <Filter>unnamed\Core\Log</Filter>
     </ClInclude>
     <ClInclude Include="src\unnamed\EntryPoint.h">
-      <Filter>Header Files</Filter>
+      <Filter>unnamed</Filter>
     </ClInclude>
-    <ClInclude Include="src\unnamed\Log.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="src\unnamed\Events\ApplicationEvent.h">
+      <Filter>unnamed\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\unnamed\Events\Event.h">
+      <Filter>unnamed\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\unnamed\Events\KeyEvent.h">
+      <Filter>unnamed\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\unnamed\Events\MouseEvent.h">
+      <Filter>unnamed\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\upch.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\unnamed\Application.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="src\unnamed\Core\Application\Application.cpp">
+      <Filter>unnamed\Core\Application</Filter>
     </ClCompile>
-    <ClCompile Include="src\unnamed\Log.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="src\unnamed\Core\Log\Log.cpp">
+      <Filter>unnamed\Core\Log</Filter>
     </ClCompile>
+    <ClCompile Include="src\upch.cpp" />
   </ItemGroup>
 </Project>

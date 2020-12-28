@@ -27,7 +27,7 @@ project "Unnamed_Project"
 	}
 
 	links {
-		"GFLW",
+		"GLFW",
 		"opengl32.lib"
 	}
 

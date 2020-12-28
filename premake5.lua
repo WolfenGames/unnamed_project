@@ -17,11 +17,11 @@ workspace "UNNAMED_PROJECT"
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
 IncludeDir = {}
-IncludeDir["GLFW"] = "%{wks.location}/unnamed_project/vendor/GFLW/include"
+IncludeDir["GLFW"] = "%{wks.location}/unnamed_project/vendor/GLFW/include"
 
 group "Dependencies"
 	-- include "vendor/premake"
-	include "unnamed_project/vendor/GFLW/"
+	include "unnamed_project/vendor/GLFW/"
 group ""
 
 include "Unnamed_Project"

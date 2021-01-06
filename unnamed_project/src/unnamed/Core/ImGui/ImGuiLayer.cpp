@@ -70,8 +70,6 @@ namespace UNNAMED {
 		static bool show = true;
 		ImGui::ShowDemoWindow(&show);
 
-		UP_CLIENT_TRACE("{0}", show);
-
 		ImGui::Render();
 		ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
 	}

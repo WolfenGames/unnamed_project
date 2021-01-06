@@ -51,12 +51,10 @@ namespace UNNAMED {
 
 		while (m_Running)
 		{
-			glClearColor(r, g, b, 1);
-			glClear(GL_COLOR_BUFFER_BIT);
 			m_Window->OnUpdate();
-
 			for (Layer* layer : m_LayerStack)
 				layer->OnUpdate();
+
 		};
 	}
 

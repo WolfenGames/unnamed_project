@@ -22,7 +22,7 @@ public:
 	Sandbox()
 	{
 		UP_CLIENT_INFO("SANDBOX RUNNING");
-		PushLayer(new ExampleLayer());
+		//PushLayer(new ExampleLayer());
 		PushOverlay(new UNNAMED::ImGuiLayer());
 	}
 

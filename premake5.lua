@@ -20,6 +20,7 @@ IncludeDir = {}
 IncludeDir["GLFW"] = "%{wks.location}/unnamed_project/vendor/GLFW/include"
 IncludeDir["Glad"] = "%{wks.location}/unnamed_project/vendor/Glad/include"
 IncludeDir["ImGui"] = "%{wks.location}/unnamed_project/vendor/imgui"
+IncludeDir["glm"] = "%{wks.location}/unnamed_project/vendor/glm"
 
 group "Dependencies"
 	-- include "vendor/premake"

@@ -12,7 +12,9 @@ project "Unnamed_Project"
 
 	files {
 		"src/**.h",
-		"src/**.cpp"
+		"src/**.cpp",
+		"vendor/glm/glm/**.hpp",
+		"vendor/glm/glm/**.inl",
 	}
 
 	defines {
@@ -25,7 +27,8 @@ project "Unnamed_Project"
 		"%{wks.location}/unnamed_project/vendor/spdlog/include",
 		"%{IncludeDir.GLFW}",
 		"%{IncludeDir.Glad}",
-		"%{IncludeDir.ImGui}"
+		"%{IncludeDir.ImGui}",
+		"%{IncludeDir.glm}"
 	}
 
 	links {
@@ -35,7 +38,7 @@ project "Unnamed_Project"
 		"opengl32.lib"
 	}
 
-	-- flags { "NoPCH" }
+	flags { "NoPCH" }
 
 	filter "system:windows"
 		systemversion "latest"

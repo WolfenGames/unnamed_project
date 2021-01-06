@@ -1,5 +1,8 @@
 #pragma once
 
+#include <cstdint>
+#include <string>
+#include <sstream>
 #include "unnamed/Events/Event.h"
 #include "unnamed/Core/Codes/KeyCodes.h"
 

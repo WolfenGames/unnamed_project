@@ -1,6 +1,7 @@
 #pragma once
 
 #include "unnamed/Core/Base.h"
+#include <string>
 
 namespace UNNAMED {
 

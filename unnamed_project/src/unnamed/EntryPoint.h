@@ -1,8 +1,5 @@
 #pragma once
 
-
-#ifndef UP_PLATFORM_WINDOWS
-
 extern UNNAMED::Application* UNNAMED::CreateApplication();
 
 int	main(int argc, char *argv[]) {
@@ -12,5 +9,3 @@ int	main(int argc, char *argv[]) {
 	app->Run();
 	delete app;
 }
-
-#endif // UP_PLATFORM_WINDOWS

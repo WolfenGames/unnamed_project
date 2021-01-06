@@ -1,19 +1,82 @@
 #include "upch.h"
 #include "Application.h"
-
-#include "unnamed/Core/Log/Log.h"
-#include "unnamed/Events/ApplicationEvent.h"
+#include <glad/glad.h>
 
 namespace UNNAMED {
-	Application::Application() {};
+#define BIND_EVENT_FN(x) std::bind(&Application::x, this, std::placeholders::_1)
+
+	Application* Application::s_Instance = nullptr;
+
+	Application::Application() {
+		s_Instance = this;
+		m_Window = std::unique_ptr<Window>(Window::Create());
+		m_Window->SetEventCallback(BIND_EVENT_FN(OnEvent));
+	};
+
 	Application::~Application() {};
 
+	void Application::OnEvent(Event& e)
+	{
+		UP_CORE_TRACE("{0}", e);
+
+		EventDispatcher dispatcher(e);
+		dispatcher.Dispatch<WindowCloseEvent>(BIND_EVENT_FN(OnWindowClose));
+		dispatcher.Dispatch<WindowResizeEvent>(BIND_EVENT_FN(OnWindowResize));
+
+		for (auto it = m_LayerStack.rbegin(); it != m_LayerStack.rend(); ++it)
+		{
+			if (e.Handled)
+				break;
+			(*it)->OnEvent(e);
+		}
+	}
+
+	void Application::PushLayer(Layer* layer)
+	{
+		m_LayerStack.PushLayer(layer);
+		layer->OnAttach();
+	}
+
+	void Application::PushOverlay(Layer* overlay)
+	{
+		m_LayerStack.PushOverlay(overlay);
+		overlay->OnAttach();
+
+	}
 
 	void Application::Run() {
+		auto r = 1;
+		auto g = 0;
+		auto b = 1;
 
-		WindowResizeEvent e(1280, 720);
-		UP_CORE_TRACE(e);
+		while (m_Running)
+		{
+			glClearColor(r, g, b, 1);
+			glClear(GL_COLOR_BUFFER_BIT);
+			m_Window->OnUpdate();
 
-		while (true);
+			for (Layer* layer : m_LayerStack)
+				layer->OnUpdate();
+		};
+	}
+
+	bool Application::OnWindowClose(WindowCloseEvent& e)
+	{
+		m_Running = false;
+		return true;
+	}
+
+	bool Application::OnWindowResize(WindowResizeEvent& e)
+	{
+
+		if (e.GetWidth() == 0 || e.GetHeight() == 0)
+		{
+			//m_Minimized = true;
+			return false;
+		}
+
+		//m_Minimized = false;
+
+		return false;
 	}
 }

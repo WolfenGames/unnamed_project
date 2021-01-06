@@ -6,6 +6,7 @@
 #include <memory>
 #include <algorithm>
 
+#include <cstdint>
 #include <string>
 #include <sstream>
 #include <vector>
@@ -13,4 +14,5 @@
 #include <unordered_set>
 
 //TODO: Platform Agnostic?
+#include "unnamed/Core/Log/Log.h"
 #include <Windows.h>

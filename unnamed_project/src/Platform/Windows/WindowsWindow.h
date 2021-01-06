@@ -17,8 +17,8 @@ namespace UNNAMED {
 
 		void OnUpdate() override;
 
-		inline unsigned int GetWidth() const override { UP_CLIENT_INFO("GETTING WIDTH {0}", m_Data.Width); return m_Data.Width; }
-		inline unsigned int GetHeight() const override { UP_CLIENT_INFO("GETTING HEIGHT {0}", m_Data.Height); return m_Data.Height; }
+		inline unsigned int GetWidth() const override { return m_Data.Width; }
+		inline unsigned int GetHeight() const override { return m_Data.Height; }
 
 		inline void SetEventCallback(const EventCallbackFn& callback) override { m_Data.EventCallback = callback; }
 		void SetVsync(bool enabled) override;

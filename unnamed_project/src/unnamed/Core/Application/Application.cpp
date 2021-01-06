@@ -45,9 +45,6 @@ namespace UNNAMED {
 	}
 
 	void Application::Run() {
-		auto r = 1;
-		auto g = 0;
-		auto b = 1;
 
 		while (m_Running)
 		{

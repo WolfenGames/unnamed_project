@@ -17,6 +17,8 @@ namespace UNNAMED {
 
 	void ImGuiLayer::OnAttach()
 	{
+		IMGUI_CHECKVERSION();
+
 		ImGui::CreateContext();
 		ImGui::StyleColorsDark();
 
@@ -52,6 +54,7 @@ namespace UNNAMED {
 
 	void ImGuiLayer::OnDetach()
 	{
+
 	}
 
 	void ImGuiLayer::OnUpdate()

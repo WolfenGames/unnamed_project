@@ -7,12 +7,10 @@ public:
 
 	void OnUpdate() override
 	{
-		UP_CLIENT_INFO("Example Layer::Update")
 	}
 
 	void OnEvent(UNNAMED::Event& e) override
 	{
-		UP_CLIENT_TRACE("{0}", e);
 	}
 };
 
@@ -22,7 +20,6 @@ public:
 	Sandbox()
 	{
 		UP_CLIENT_INFO("SANDBOX RUNNING");
-		//PushLayer(new ExampleLayer());
 		PushOverlay(new UNNAMED::ImGuiLayer());
 	}
 

@@ -17,8 +17,6 @@ namespace UNNAMED {
 
 	void Application::OnEvent(Event& e)
 	{
-		UP_CORE_TRACE("{0}", e);
-
 		EventDispatcher dispatcher(e);
 		dispatcher.Dispatch<WindowCloseEvent>(BIND_EVENT_FN(OnWindowClose));
 		dispatcher.Dispatch<WindowResizeEvent>(BIND_EVENT_FN(OnWindowResize));
@@ -52,6 +50,10 @@ namespace UNNAMED {
 			glClear(GL_COLOR_BUFFER_BIT);
 			for (Layer* layer : m_LayerStack)
 				layer->OnUpdate();
+
+			auto [x, y] = Input::GetMousePos();
+			auto LeftMouseButton = Input::IsMouseButtonPressed(Mouse::Button0);
+			auto RightMouseButton = Input::IsMouseButtonPressed(Mouse::Button2);
 
 			m_Window->OnUpdate();
 		};

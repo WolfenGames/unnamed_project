@@ -11,26 +11,25 @@ namespace UNNAMED {
 	{
 	public:
 		ImGuiLayer();
-		~ImGuiLayer();
+		~ImGuiLayer() = default;
 
-		void OnAttach();
-		void OnDetach();
-		void OnUpdate();
-		void OnEvent(Event& e);
-	private:
-		bool OnMouseButtonPressedEvent(MouseButtonPressedEvent& e);
-		bool OnMouseButtonReleasedEvent(MouseButtonReleasedEvent& e);
-		bool OnMouseMoveEvent(MouseMovedEvent& e);
-		bool OnMouseScrolledEvent(MouseScrolledEvent& e);
+		void OnAttach() override;
+		void OnDetach() override;
+		void OnImGuiRender() override;
 
-		bool OnWindowResizeEvent(WindowResizeEvent& e);
-		bool OnKeyReleasedEvent(KeyReleasedEvent& e);
-		bool OnKeyPressedEvent(KeyPressedEvent& e);
-		bool OnKeyTypedEvent(KeyTypedEvent& e);
+		void Begin();
+		void End();
 
+		void SetDarkThemeColors();
+
+		void OnEvent(Event& e) override;
+		void BlockEvents(bool block) { m_BlockEvents = block; }
 
 	private:
 		float m_Time = 0.0f;
+
+
+		bool m_BlockEvents = true;
 	};
 
 }

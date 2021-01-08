@@ -20,7 +20,7 @@ public:
 	Sandbox()
 	{
 		UP_CLIENT_INFO("SANDBOX RUNNING");
-		PushOverlay(new UNNAMED::ImGuiLayer());
+		PushLayer(new ExampleLayer());
 	}
 
 	~Sandbox()

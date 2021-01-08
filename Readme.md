@@ -21,3 +21,11 @@ This should generate the project solution needed
 
 # State of project
 PRIMITIVE AF
+
+# STACK
+* GLFW
+* GLAD
+* SPDLOG
+* GLAD
+* GLM
+* C++

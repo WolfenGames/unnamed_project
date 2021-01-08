@@ -12,6 +12,8 @@ My hope is for this to help students get involved in the open source commuinty [
 # Supports
 Windows 64 Bit
 
+# Cloning
+`git clone --recursive https://github.com/wolfengames/unnamed_project`
 # Build
 To build you would need to run the following
 `./vendor/premake/premake5.exe vs2019`

@@ -55,6 +55,9 @@ namespace UNNAMED {
 			auto LeftMouseButton = Input::IsMouseButtonPressed(Mouse::Button0);
 			auto RightMouseButton = Input::IsMouseButtonPressed(Mouse::Button2);
 
+			if (Input::IsKeyPressed(Key::Tab))
+				UP_CORE_TRACE("TAB PRESSED");
+
 			m_Window->OnUpdate();
 		};
 	}
